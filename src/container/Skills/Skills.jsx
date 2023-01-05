@@ -61,7 +61,8 @@ const Skills = () => {
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work app__flex"
-                      data-tip
+                      data-tooltip-content={work.desc}
+                      id={work.name}
                       data-for={work.name}
                       key={work.name}
                     >
@@ -69,14 +70,12 @@ const Skills = () => {
 
                       <p className="p-text">{work.company}</p>
                     </motion.div>
-                    <ReactTooltip
-                      id={work.name}
+                    {/* <ReactTooltip
+                      anchorId={work.name}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
-                    >
-                      {work.desc}
-                    </ReactTooltip>
+                    /> */}
                   </>
                 ))}
               </motion.div>
